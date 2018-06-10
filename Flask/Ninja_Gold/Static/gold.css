@@ -1,0 +1,59 @@
+*{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+.container{
+    height: 570px;
+    width: 900px;
+    padding: 15px;
+    background: lightgray;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 { 
+    text-align: center;
+    
+}
+h4 {
+    text-align: center;
+    font-size: .8em;
+    
+}
+.goldcount{
+    border: 2px groove grey;
+    padding: 10px;
+    width: 150px;
+    position: relative;
+    right: 363px;
+}
+input{
+    box-shadow: 2px 2px 2px gray;
+}
+.boxes{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.farm, .cave, .house, .casino{
+    display: inline-block;
+    padding: 0px 20px 10px 20px;
+    vertical-align: top;
+    border: 2px groove grey;
+    text-align: center;
+    margin-right: 55px;
+}
+.activities{ 
+    display: inline-block;
+
+    text-align: left;
+    
+}
+ul{
+    border: 2px groove grey;
+    overflow:auto;
+    height: 200px;
+    width: 800px;
+    padding-left: 5px;
+}
+li{
+    list-style: none;
+}

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gold.css') }}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ninja Gold</h1>
+        <h3 class="goldcount">Your Gold: {{ session['gold'] }}</h3>
+        <div class="boxes">
+            <div class="farm">
+                <h3>Farm</h3>
+                <h4>(Earns 10-20 Gold)</h4>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value="farm" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="cave">
+                <h3>Cave</h3>
+                <h4>(Earns 5-10 Gold)</h4>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value="cave" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="house">
+                <h3>House</h3>
+                <h4>(Earns 2-5 Gold)</h4>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value="house" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+            <div class="casino">
+                <h3>Casino</h3>
+                <h4>(Earns/Takes 0-50 Gold)</h4>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value="casino" />
+                    <input type="submit" value="Find Gold!"/>
+                </form>
+            </div>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                {% for i in range(0, session['activities']|length) %}
+                    <li>{{ session['activities'][i] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
