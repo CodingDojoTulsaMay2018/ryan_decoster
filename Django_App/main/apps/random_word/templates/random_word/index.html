@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word</title>
+</head>
+<body>
+    <p><b>Random Word</b> (Attempt: {{ request.session.counter }})</p>
+    <form action="/random_word">
+        {% csrf_token %}
+        <h1>{{ generate }}</h1>
+        <button type="submit">Generate</button>
+    </form>
+</body>
+<style>
+    *{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    p{
+        text-align: center;
+    }
+    form{
+        text-align: center;
+    }
+</style>
+</html>
