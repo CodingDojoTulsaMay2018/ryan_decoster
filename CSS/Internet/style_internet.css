@@ -1,0 +1,152 @@
+.wrapper{
+    height: 965px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+.header{
+    height: 160px;
+    width: auto;
+}
+img{
+    max-width: 100%;
+}
+.top_header{
+    height: 100px;
+}
+.top_header img{
+    height: 125px;
+    position: relative;
+}
+.top_header span{
+    font-size: 45px;
+    position: relative;
+    bottom: 50px;
+}
+.bottom_header{
+    background: linear-gradient(#2B6AA1, #3481C4, #2B6AA1);
+    height: 40px;
+    padding: 10px;
+}
+.bottom_header span{
+    color: white;
+    font-size: 33px;
+}
+.side_nav{
+    height: 646px;
+    width: 205px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+}
+.side_1{
+    height: 200px;
+    width: auto;
+    border-bottom: 1px solid gray;
+}
+.side_1 .btn_1{
+    width: 205px;
+}
+.side_2{
+    height: 385px;
+    width: auto;
+    margin-top: 20px;
+    background: url(ad_background.png);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+}
+.side_2 .ninja{
+    height: 145px;
+    position: relative;
+    bottom: 35px;
+}
+.side_2 .btn{
+    position: relative;
+    left: 1px;
+    bottom: 28px;
+}
+.main_content{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+    height: 645px;
+    width: 740px;
+}
+.top_main{
+    display: grid;
+    grid-template-columns: 63% 37%;
+    height: 85px;
+    border-bottom: 1px solid gray;
+}
+.dns img{
+    height: 30px;
+    position: relative;
+    top: 10px;
+}
+.dns span{
+    position: relative;
+    top: 9px;
+    color: #2B6AA1;
+}
+.contact{
+    text-align: center;
+}
+.contact img{
+    height: 45px;
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+.contact .hours{
+    font-size: 12px;
+    position: relative;
+    bottom: 28px;
+}
+.contact .number{
+    font-size: 27px;
+    color: #00C0DF;
+    font-weight: bold;
+    position: relative;
+    bottom: 22px;
+    left: 21px;
+}
+.contact .international{
+    font-size: 10px;
+    position: relative;
+    left: 23px;
+    bottom: 25px;
+}
+h3{
+    color: #2B6AA1;
+}
+.body_1 img{
+    height: 100px;
+    position: relative;
+    left: 215px;
+}
+.body_1 .blue, .body_2 .blue, .the_big3 .blue{
+    color: #00C0DF;
+    font-weight: bold;
+}
+.the_big3{
+    border: 5px solid #00C0DF;
+    border-bottom: none;
+    height: 160px;
+}
+.the_big3 img{
+    height: 120px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+.body_3{
+    position: relative;
+    left: 170px;
+    bottom: 120px;
+    width: 545px;
+}

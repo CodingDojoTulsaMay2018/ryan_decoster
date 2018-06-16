@@ -1,0 +1,211 @@
+*{
+    /* border: 1px solid red; */
+}
+.container{
+    width: 970px;
+    height: 1015px;
+    background-repeat: none;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgba(128, 50, 128, 0.89), rgba(128, 128, 128, 0.596), rgb(128, 50, 128, 0.89));
+    /* background-image: url('../portfolio/portfolio_assignment.png'); */
+}
+.header{
+    width: 100%;
+    height: 63px;
+    background-color: white;
+    /* opacity: .8; */
+}
+.about{
+    width: 100%;
+    height: 315px;
+    /* background-color: purple; */
+    /* opacity: .8; */
+}
+.lamode, .family, .five{
+    display: inline-block;
+    vertical-align: top;
+}
+.lamode{
+    background-color: white;
+    /* opacity: .6; */
+    height: 551px;
+    margin-bottom: 25px;
+    width: 289px;
+    margin-right: 18px;
+    margin-left: 25px;
+}
+.family{
+    background-color: white;
+    /* opacity: .5; */
+    height: 551px;
+    width: 289px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+}
+.five{
+    background-color: white;
+    /* opacity: .5; */
+    height: 551px;
+    width: 289px;
+    margin-right: 26px;
+    margin-bottom: 25px;
+}
+.footer{
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    /* opacity: .8; */
+}
+.jayne, .shadow{
+    display: inline-block;
+    vertical-align: top;
+}
+.jayne{
+    height: 100%;
+    width: 208px;
+    margin-right:340px;
+    text-align: center;
+}
+.jayne p{
+    margin-bottom: 8px;
+    font-size: 35px;
+    margin-top: 6px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.shadow{
+    height: 100%;
+    width: 389px;
+    text-align: center;
+}
+.shadow p{
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 17px;
+}
+.box1, .box2{
+    display: inline-block;
+    vertical-align: top;
+}
+.box1{
+    margin-left: 23px;
+    margin-top: 17px;
+    margin-right: 19px;
+    height: 273px;
+    width: 410px;
+}
+.box2{
+    margin-top: 17px;
+    width: 482px;
+    height: 272px;
+    margin-right: 27px;
+    background-color: white;
+}
+.box2 p{
+    margin-bottom: 15px;
+    height: 228px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 9px;
+    color: black;
+    font-size: 17px;
+}
+.box1 img{
+    width: 402px;
+    height: 265px;
+    border: 4px solid gray;
+}
+.title{
+    background: linear-gradient(rgba(128, 128, 128, 0.699), rgb(110, 110, 110), rgba(128, 128, 128, 0.808));
+    font-size: 20px;
+    height: 30px;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    text-indent: 10px;
+    padding-top: 8px;
+    padding-left: 9px;
+}
+.modehead, .famhead, .fivehead{
+    height: 30px;
+    width: auto;
+    background: linear-gradient(rgba(128, 128, 128, 0.699), rgb(110, 110, 110), rgba(128, 128, 128, 0.808));
+    vertical-align: middle;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 10px;
+    padding-top: 8px;
+    padding-left: 9px;
+}
+
+.lamode img, .family img, .five img{
+    width: 100%;
+    height: 150px;
+}
+.modetext, .famtext, .fivetext{
+    width: auto;
+    height: 150px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.tech1, .tech2, .tech3{
+    vertical-align: top;
+    height: 200px;
+    width: auto;
+}
+.tech1head, .tech2head, .tech3head{
+    width: auto;
+    height: 30px;
+    color: white;
+    background: linear-gradient(rgba(128, 128, 128, 0.699), rgb(110, 110, 110), rgba(128, 128, 128, 0.808));
+    padding-top: 8px;
+    padding-left: 9px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.icons, .icons2, .icons3{
+    width: auto;
+    height: 160px;
+}
+.icons img, .icons2 img, .icons3 img{
+    margin-top: 9px;
+    margin-left: 13px;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+.modebutton, .fambutton, .fivebutton{
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    background-color: darkgreen;
+    border: 1px solid black;
+    border-radius: 10px;
+    vertical-align: middle;
+    box-shadow: 5px 5px 5px grey;
+}
+.foot1, .foot2{
+    width: auto;
+    height: 30px;
+    color: black;
+    font-size: 18px;
+}
+.foot1{
+    text-align: center;
+}
+.foot2{
+    width: 390px;
+    margin-left: 295px;
+    vertical-align: middle;
+}
+.foot2 img{
+    height: 20px;
+    width: 20px;
+    margin-top: 4px;
+    vertical-align: middle;
+}
