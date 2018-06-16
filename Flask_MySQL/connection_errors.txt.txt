@@ -1,0 +1,3 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+I used my MySQL password I set up initially when using the workbench. It is now up and working.

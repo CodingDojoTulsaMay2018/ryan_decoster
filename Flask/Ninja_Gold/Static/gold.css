@@ -43,13 +43,11 @@ input{
 }
 .activities{ 
     display: inline-block;
-
     text-align: left;
-    
 }
 ul{
     border: 2px groove grey;
-    overflow:auto;
+    overflow: auto;
     height: 200px;
     width: 800px;
     padding-left: 5px;

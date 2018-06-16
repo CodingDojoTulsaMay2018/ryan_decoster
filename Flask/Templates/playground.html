@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Welcome!</h1>
+        <div class="boxes">
+            {% for i in range(0, times) %}
+                <div class="box" {{ color }}></div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<style>
+    h1{
+        text-align: center;
+    }
+    .boxes{
+        text-align: center;
+    }
+    .box{
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+</style>
+</html>

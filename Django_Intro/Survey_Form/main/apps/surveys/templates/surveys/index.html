@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <form action="submit" method='POST'>
+            {% csrf_token %}
+            <div class="form-group">
+                Name: <input class="form-control" type="text" name="name" value="" placeholder="Insert Name" />
+            </div>
+            <div class="form-group">
+                Dojo Location: <select class="form-control" name="location" value="">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Dallas">Dallas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                Favorite Language: <select class="form-control" name="language" value="">
+                    <option value="Python">Python</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </div>
+            <div class="form-group">
+                Comment (optional): <br>
+                <textarea name="comment" value="" rows="10" cols="155">
+                </textarea>
+            </div>
+            <input class='btn btn-primary' type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>

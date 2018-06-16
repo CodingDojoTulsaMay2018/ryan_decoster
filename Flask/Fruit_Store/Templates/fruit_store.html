@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Dojo Fruit Store</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Dojo Fruit Store</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form action="/danger" method="post">
+            <h4><u>What would you like to buy?</u></h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>
+                            <select name="strawberry">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rasberry</td>
+                        <td>
+                            <select name="rasberry">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>
+                            <select name="apple">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><u>Your Information</u></h4>
+            <div class="form-group">
+                Name: <input class="form-control" type="text" name="name" value="" placeholder="Name" />
+            </div>
+            <div class="form-group">
+                Your Student ID: <input class="form-control" type="text" name="id" value="" placeholder="Student ID">
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
+        </form>
+    </div>
+</body>
+</html>

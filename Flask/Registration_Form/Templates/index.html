@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="/result", method='post'>
+            {% with messages = get_flashed_messages(category_filter=['fieldAlert']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% with messages = get_flashed_messages(category_filter=['nameAlert']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                First Name:<br> <input type="text" name="first_name" value="" />
+            </div>
+            <div class="form-group">
+                Last Name:<br> <input type="text" name="last_name" value="" />
+            </div>
+            {% with messages = get_flashed_messages(category_filter=['emailAlert']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                Email:<br> <input type="text" name="email" value="" />
+            </div>
+            {% with messages = get_flashed_messages(category_filter=['passwordAlert']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                Password:<br> <input type="password" name="password" value="" />
+            </div>
+            <div class="form-group">
+                Confirm Password:<br> <input type="password" name="confirm" value="" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            {% with messages = get_flashed_messages(category_filter=['successAlert']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+<style>
+    input{
+        width: 325px;
+    }
+</style>
+</html>

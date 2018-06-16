@@ -1,0 +1,24 @@
+.container{
+    margin: 10px;
+}
+.boxes{
+    display: flex;
+    text-align: center;
+}
+.farm, .cave, .house, .casino{
+    border: 2px solid black;
+    padding: 5px 15px 5px 15px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 2px gray;
+}
+.activities{
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px gray; 
+    width: 727px;
+    overflow: auto;
+    height: 200px;
+    float: left;
+}
+li{
+    list-style: none;
+}

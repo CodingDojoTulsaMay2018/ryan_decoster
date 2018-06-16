@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Words</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box_1">
+            <form action="submit" method='POST'>
+                {% csrf_token %}
+                <h1>Add a new word:</h1>
+                    <input type="text" name="word" value="" /><br>
+                <p>Choose color:</p>
+                    <input type="radio" name="color" value="red" />  Red<br>
+                    <input type="radio" name="color" value="blue" />  Blue<br>
+                    <input type="radio" name="color" value="green" />  Green<br>
+                    <input type="checkbox" name="font" /> show in BIG font!<br><br>
+                <button type="submit">Add to Session</button>
+            </form>
+        </div> 
+        <div class="box_2">
+            <form action="reset" method="POST">
+                {% csrf_token %}
+                <button type="submit">Clear Session</button>
+            </form>
+            {% for i in list %}
+                <ul>
+                    <li style='color:{{i.color}};font-size:{{i.font}}'>{{ i.word }} <span style="color: black;font-size:15px">{{ i.time }}</span></li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<style>
+    .box_1, .box_2{
+        display: inline-block;
+        vertical-align: top;
+    }
+    li{
+        list-style: none;
+    }
+    .box_1{
+        border-right: 5px solid black;
+        padding-right: 20px;
+    }
+    .box_2{
+        padding-left: 20px;
+        width: 500px;  
+    }
+    .box_2 button{
+        float: right;
+    }
+</style>
+</html>

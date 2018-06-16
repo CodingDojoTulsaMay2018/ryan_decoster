@@ -48,7 +48,7 @@
             <h3>Activities:</h3>
             <ul>
                 {% for i in range(0, session['activities']|length) %}
-                    <li>{{ session['activities'][i] }}</li>
+                    <li style="color: {{ color }};">{{ session['activities'][i] }}</li>
                 {% endfor %}
             </ul>
         </div>
