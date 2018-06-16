@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Semi-Restful Users</title>
+</head>
+<body>
+    <div class="container">
+        <h1>User {{id}}</h1><br>
+        <p><b>Full Name:</b> {{first_name}} {{last_name}}</p> 
+        <p><b>Email:</b> {{email}}</p> 
+        <p><b>Created At:</b> {{created_at}}</p><br>
+        <a href="/users">Back</a> | <a href="/users/{{id}}/edit">Edit</a> | <a href="/users/{{id}}/destroy">Delete</a>
+    </div>
+</body>
+</html>
