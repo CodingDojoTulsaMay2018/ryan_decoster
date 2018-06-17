@@ -1,1 +1,1 @@
-# All assignments done through Coding Dojo.
+# Completed assignments done through Coding Dojo.
