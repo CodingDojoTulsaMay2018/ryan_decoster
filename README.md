@@ -1,1 +1,1 @@
-# ryan_decoster
+# All assignments done through Coding Dojo.
