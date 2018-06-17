@@ -1,0 +1,32 @@
+1. "leagues": League.objects.filter(sport='Baseball'),
+
+2. "leagues": League.objects.filter(name__contains='Womens'),
+
+3. "leagues": League.objects.filter(sport__contains='Hockey'),
+
+4. "leagues": League.objects.exclude(sport='Football'),
+
+5. "leagues": League.objects.filter(name__contains='Conference'),
+
+6. "leagues": League.objects.filter(name__contains='Atlantic'),
+
+7. "teams": Team.objects.filter(location='Dallas'),
+
+8. "teams": Team.objects.filter(team_name='Raptors'),
+
+9. "teams": Team.objects.filter(location__contains='City'), # Team name contains 'City'.
+
+10. "teams": Team.objects.filter(team_name__startswith='T'), # Team name starts with a 'T'.
+
+11. "teams": Team.objects.all().order_by('location'), # Alphabetical by location.
+
+12. "teams": Team.objects.all().order_by('-team_name'), # Reverse alphabetical by team_name.
+
+13. "players": Player.objects.filter(last_name='Cooper'),
+
+14. "players": Player.objects.filter(first_name='Joshua'),
+
+15. "players": Player.objects.filter(last_name='Cooper').exclude(first_name='Joshua'),
+
+16. "players": Player.objects.extra(where=["first_name='Alexander' OR first_name = 'Wyatt'"]) 
+    # All players with a first name of Alexander OR Wyatt.
