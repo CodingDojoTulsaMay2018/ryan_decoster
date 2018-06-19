@@ -9,7 +9,7 @@ def index(request):
             'first_name': object.first_name,
             'last_name': object.last_name,
             'email': object.email,
-            'created_at':object.created_at
+            'created_at': object.created_at
         }
 
     context = {

@@ -22,14 +22,19 @@ def register(request):
         return redirect('/success')
 
 def login(request):
-    user = User.objects.get(email=request.POST['email'])
-    if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
-        request.session['user_id'] = user.id
-        messages.error(request, "Successfully registered (or logged in)!")
-        return redirect('/success')
+    if User.objects.filter(email = request.POST['email']):
+        user = User.objects.get(email=request.POST['email'])
+        if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
+            request.session['user_id'] = user.id
+            request.session['first_name'] = user.first_name
+            messages.error(request, "Successfully logged in!")
+            return redirect('/success')
+        else:
+            messages.error(request, "Invalid email or password.")
+            return redirect('/')
     else:
-        messages.error(request, "Wrong password.")
-    return redirect('/')
+        messages.error(request, "Invalid email or password.")
+        return redirect('/')
 
 
 def success(request):
@@ -37,3 +42,8 @@ def success(request):
         'name': request.session['first_name']
     }
     return render(request, 'login_registration/success.html', context)
+
+def logout(request):
+    request.session.clear()
+    messages.error(request, "You have successfully logged out!")
+    return redirect('/')
