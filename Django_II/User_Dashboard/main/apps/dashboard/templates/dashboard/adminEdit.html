@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Edit User</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <span class="test">Test App</span>
+            <a class="home" href='/'>Home</a>
+            <a class='dashboard' href="/dashboard/admin">Dashboard</a>
+            <a class='logout' href="/logout">Logout</a>
+        </nav>
+        <span class='edit_profile'>Edit Profile {{id}}</span>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="main_content">
+            <div class="info">
+                <h5>Edit Information</h5>
+                <form class='form-group' action="adminUpdateInfo" method='POST'>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <b>First Name:</b><br> <input class='form-control' type="text" name="first_name" value="{{first_name}}" />
+                    </div>
+                    <div class="form-group">
+                        <b>Last Name:</b><br> <input class='form-control' type="text" name="last_name" value="{{last_name}}" />
+                    </div>
+                    <div class="form-group">
+                        <b>Email:</b><br> <input class='form-control' type="text" name="email" value="{{email}}" />
+                    </div>
+                    <div class="form-group">
+                        <b>User Level:</b><br> <input class='form-control' type="text" name="user_level" value="{{user_level}}" />
+                    </div>
+                    <button class='btn btn-success' type="submit">Save</button>
+                </form>
+            </div>
+            <div class="change_pass">
+                <h5>Change Password</h5>
+                <form action="adminUpdatePassword" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <b>Password:</b><br> <input class='form-control' type="password" name="password" value="" />
+                    </div>
+                    <div class="form-group">
+                        <b>Confirm Password:</b><br> <input class='form-control' type="password" name="confirm" value="" />
+                    </div>
+                    <button type="update" class="btn btn-success">Update Password</button><br>
+                </form>
+            </div>
+        </div>
+    </div>  
+</body>
+<style>
+    form{
+        padding: 30px;
+    }
+    nav{
+        box-shadow: 1px 1px 2px gray;
+        margin-bottom: 20px;
+    }
+    .container{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .info, .change_pass{
+        display: inline-block;
+        border: 5px double black;
+        height: 100px;
+        width: 200px;
+    }
+    a.logout{
+        color: white;
+        position: relative;
+        left: 725px;
+    }
+    span{
+        color: white;
+        font-size: 20px;
+        margin: 0px 50px 0px 30px;
+    }
+    .test{
+        font-weight: bold;
+    }
+    a.home, a.dashboard{
+        color: white;
+    }
+    a.dashboard{
+        margin-left: 30px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    span.edit_profile{
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .main_content{
+        margin: 30px 0px 0px 25px;
+    }
+    .info{
+        height:420px;
+        width:500px;
+        border:2px solid black;
+        margin-right: 135px;
+        vertical-align: top;
+    }
+    .change_pass{
+        height:300px;
+        width:450px;
+        border:2px solid black;
+        vertical-align: top;
+    }
+    h5{
+        width:160px;
+        margin-top:-15px;
+        margin-left:35px;
+        background:white;
+    }
+</style>
+</html>
+</body>
+</html>

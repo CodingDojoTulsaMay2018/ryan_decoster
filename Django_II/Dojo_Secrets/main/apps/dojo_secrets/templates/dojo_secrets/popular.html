@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Most Popular Secrets</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a class='logout' href="/logout">Logout</a>
+            <a class='back' href="/profile">Back</a>
+        </div>
+        <h1>Most Popular Secrets</h1>
+        <div class="main_content">
+        <ol type="1">
+            {% for secret in Secrets %}
+            <br>
+                <h5><li>{{secret.secret}}</li></h5>
+                <p>({{secret.created_at|timesince}} ago)  -- {{secret.count_likes}} likes<p>
+                {% if user not in secret.liked_users.all %}
+                    <form action="like_2" method="post">
+                        {% csrf_token %}
+                        <input type='hidden' name="user_id" value="{{request.session.user_id}}">
+                        <input type='hidden' name="secret_id" value="{{secret.id}}">
+                        <input type="submit" value="Like" class="btn btn-outline-primary btn-sm">
+                    </form><br>
+                {% else %}
+                    <p class='liked'><b>Liked!</b></p><br>
+                {% endif %}
+                {% if secret.uploader.id == user.id %}  
+                    <form action="delete_2" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value='Delete' class='btn btn-link'>
+                        <input type='hidden' name="secret_id" value="{{secret.id}}">   
+                    </form><br>
+                {% endif %}
+            {% endfor %}
+        </ol>
+        </div>
+    </div>
+</body>
+<style>
+    .back{
+        float: right;
+        margin-right: 20px;
+    }
+    .logout{
+        float: right;
+    }
+    .main_content{
+        border: 2px solid black;
+        padding: 0px 10px 20px 10px;
+    }
+    .btn-link{
+        position: relative;
+        left: 50px;
+        bottom: 55px;
+        color: red;
+    }
+    .btn-outline-primary{
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+    .liked{
+        position: relative;
+        top: 16px;
+    }
+</style>
+</html>

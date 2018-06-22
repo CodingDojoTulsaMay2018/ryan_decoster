@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <span class="test">Test App</span>
+            <a class="home" href='/'>Home</a>
+            <a class='logout' href="/logout">Logout</a>
+        </nav>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <span class='users'>Manage Users</span><a type='button' class='btn btn-success' href="/users/new">Add New</a>
+        <table class='table table-striped'>
+            <thead class='head'>
+                <tr>
+                    <td>id</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Created At</td>
+                    <td>Admin</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+                <tbody>
+                    {% for i in Users %}
+                    <tr>
+                        <td>{{ i.id }}</td>
+                        <td><a href='/users/{{i.id}}/show'>{{ i.first_name }} {{i.last_name}}</a></td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.created_at }}</td>
+                        <td>{{ i.user_level }}</td>
+                        <td><a href='/users/{{i.id}}/adminEdit'>Edit</a> | <a href="/users/{{i.id}}/destroy">Remove</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table><br>
+        </div>
+    </div>
+</body>
+<style>
+    nav{
+        box-shadow: 1px 1px 2px gray;
+        margin-bottom: 20px;
+    }
+    .container{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .btn-success{
+        float: right;
+    }
+    td{
+        padding: 10px;
+    }
+    table{
+        border-collapse: collapse;
+        border-spacing: 0px;
+        border: 2px solid black;
+        margin-top: 10px; 
+    }
+    td{
+        border-left: 2px solid black;
+    }
+    thead{
+        border-bottom: 2px solid black;
+    }
+    a.logout{
+        color: white;
+        position: relative;
+        left: 825px;
+    }
+    span{
+        color: white;
+        font-size: 20px;
+        margin: 0px 50px 0px 30px;
+    }
+    span.users{
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .test{
+        font-weight: bold;
+    }
+    a.home{
+        color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+</style>
+</html>
