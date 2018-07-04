@@ -1,0 +1,11 @@
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\bin\Debug\netcoreapp2.0\wizardninjasamurai.deps.json
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\bin\Debug\netcoreapp2.0\wizardninjasamurai.runtimeconfig.json
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\bin\Debug\netcoreapp2.0\wizardninjasamurai.runtimeconfig.dev.json
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\bin\Debug\netcoreapp2.0\wizardninjasamurai.dll
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\bin\Debug\netcoreapp2.0\wizardninjasamurai.pdb
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.AssemblyInfoInputs.cache
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.AssemblyInfo.cs
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.dll
+C:\Users\Ryan\Desktop\C#\wizardninjasamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.pdb
+C:\Users\Ryan\Desktop\C#\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\wizardninjasamurai.csprojResolveAssemblyReference.cache
