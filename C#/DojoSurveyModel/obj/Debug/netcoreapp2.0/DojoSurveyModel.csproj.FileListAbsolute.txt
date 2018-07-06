@@ -1,0 +1,11 @@
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\bin\Debug\netcoreapp2.0\DojoSurveyModel.deps.json
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\bin\Debug\netcoreapp2.0\DojoSurveyModel.runtimeconfig.json
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\bin\Debug\netcoreapp2.0\DojoSurveyModel.runtimeconfig.dev.json
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\bin\Debug\netcoreapp2.0\DojoSurveyModel.dll
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\bin\Debug\netcoreapp2.0\DojoSurveyModel.pdb
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\obj\Debug\netcoreapp2.0\DojoSurveyModel.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\obj\Debug\netcoreapp2.0\DojoSurveyModel.AssemblyInfoInputs.cache
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\obj\Debug\netcoreapp2.0\DojoSurveyModel.AssemblyInfo.cs
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\obj\Debug\netcoreapp2.0\DojoSurveyModel.dll
+C:\Users\Ryan\Desktop\.NetCore\dojosurveymodel\obj\Debug\netcoreapp2.0\DojoSurveyModel.pdb
+C:\Users\Ryan\Desktop\.NetCore\DojoSurveyModel\obj\Debug\netcoreapp2.0\DojoSurveyModel.csprojResolveAssemblyReference.cache

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Survey Submission";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+@model dojosurveymodel.Models.Ninja
+
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Location:</td>
+        <td>@Model.Location</td>
+    </tr>
+    <tr>
+        <td>Language:</td>
+        <td>@Model.Language</td>
+    </tr>
+    <tr>
+        <td>Comment:</td>
+        <td>@Model.Comment</td>
+    </tr>
+</table>
+
+<style>
+    td{
+        padding: 0px 10px;
+    }
+</style>
+
