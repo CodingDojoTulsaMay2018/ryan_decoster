@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    <title>Dojodachi</title>
+    @using dojodachi.Models
+</head>
+<style>
+    .container {
+        text-align: center;
+    }
+    .stats {
+        text-align: center;
+        margin: 20px;
+    }
+    span {
+        margin: 0px 15px;
+        font-weight: bold;
+    }
+    .status {
+        border: 2px solid black;
+        text-align: center;
+        height: 200px;
+        width: 600px;
+        margin: 20px;
+        position: relative;
+        left: 240px;
+    }
+    p#status {
+        position: relative;
+        top: 70px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    button {
+        margin: 0px 15px;
+        box-shadow: 2px 1px 5px gray;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="stats">
+            <span id="fullness">Fullness: 20</span>
+            <span id="happiness">Happiness: 20</span>
+            <span id="meals">Meals: 3</span>
+            <span id="energy">Energy: 50</span>
+        </div>
+        <div class="status">
+            <p id="status">Click the buttons below to interact with your Dachi!</p>
+        </div>
+        <div class="actions">
+            <button id="feed" class="ui primary button">Feed</button>
+            <button id="play" class="ui primary button">Play</button>
+            <button id="work" class="ui primary button">Work</button>
+            <button id="sleep" class="ui primary button">Sleep</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#feed').click(function(){
+            $.get("feed", function(response) {
+                $("#fullness").html("Fullness: " + response.fullness + "&nbsp;&nbsp;");
+                $("#meals").html("Meals: " + response.meals + "&nbsp;&nbsp;");
+                $("#status").html(response.status);
+            })
+        })
+        $('#play').click(function(){
+            $.get("play", function(response) {
+                $("#energy").html("Energy: " + response.energy + "&nbsp;&nbsp;");
+                $("#happiness").html("Happiness: " + response.happiness + "&nbsp;&nbsp;");
+                $("#status").html(response.status);
+            })
+        })
+        $('#work').click(function(){
+            $.get("work", function(response) {
+                $("#energy").html("Energy: " + response.energy + "&nbsp;&nbsp;");
+                $("#meals").html("Meals: " + response.meals + "&nbsp;&nbsp;");
+                $("#status").html(response.status);
+            })
+        })
+        $('#sleep').click(function(){
+            $.get("sleep", function(response) {
+                $("#energy").html("Energy: " + response.energy + "&nbsp;&nbsp;");
+                $("#happiness").html("Happiness: " + response.happiness + "&nbsp;&nbsp;");
+                $("#fullness").html("Fullness: " + response.fullness + "&nbsp;&nbsp;");
+                $("#status").html(response.status);
+            })
+        })                
+    })
+</script>
+</html>

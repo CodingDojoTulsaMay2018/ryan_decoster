@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    <title>Dojodachi</title>
+</head>
+<style>
+    .container {
+        text-align: center;
+    }
+    .stats {
+        text-align: center;
+        margin: 20px;
+    }
+    span {
+        margin: 0px 15px;
+        font-weight: bold;
+    }
+    .status {
+        border: 2px solid black;
+        text-align: center;
+        height: 200px;
+        width: 600px;
+        margin: 20px;
+        position: relative;
+        left: 240px;
+    }
+    p#status {
+        position: relative;
+        top: 70px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    button {
+        margin: 0px 15px;
+        box-shadow: 2px 1px 5px gray;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="stats">
+            <span id="fullness">Fullness: 20</span>
+            <span id="happiness">Happiness: 20</span>
+            <span id="meals">Meals: 3</span>
+            <span id="energy">Energy: 50</span>
+        </div>
+        <div class="status">
+            <p id="status"></p>
+        </div>
+        <div class="actions">
+            <button id="restart" class="ui primary button">Play Again?</button>
+        </div>
+    </div>
+</body>
+</html>
