@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lost in the Woods</title>
+    @model Trail
+</head>
+<body>
+    <div class="container">
+        <h1>Add A New Trail</h1>
+        <a href="/">Go Home</a>
+        <table>
+            <form class="form" asp-action="create" asp-controller="Home" method="post">
+                <tr>
+                    <td><label asp-for="Name">Trail Name:</label></td>
+                    <td><input asp-for="Name" type="text" name="Name"></td>
+                    <td><span asp-validation-for="Name"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Description">Description:</label></td>
+                    <td><textarea name="Description" cols="50" rows="5"></textarea></td>
+                    <td><span asp-validation-for="Description"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Length">Trail Length:</label></td>
+                    <td><input asp-for="Length" type="text" name="Length"></td>
+                    <td><span asp-validation-for="Length"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Gain">Elevation Change:</label></td>
+                    <td><input asp-for="Gain" type="text" name="Gain"></td>
+                    <td><span asp-validation-for="Gain"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Longitude">Longitude & Latitude:</label></td>
+                    <td><input asp-for="Longitude" type="text" name="Longitude"></td>
+                    <td><input asp-for="Latitude" type="text" name="Latitude"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span asp-validation-for="Longitude"></span></td>
+                    <td><span asp-validation-for="Latitude"></span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-success">Create Record</button></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+<style>
+    td{
+        padding: 0px 10px;
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 10px;
+    }
+    span {
+        color: red;
+    }
+    a{
+        float: right;
+        font-size: 20px;
+        position: relative;
+        bottom: 50px;
+    }
+</style>
+</html>

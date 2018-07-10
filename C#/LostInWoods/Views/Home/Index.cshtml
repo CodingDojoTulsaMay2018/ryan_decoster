@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lost In The Woods</title>
+    @model LostInWoods.Models.Trail
+</head>
+<body>
+    <div class="container">
+        <h1>Lost in the Woods</h1>
+        <p>List of local hiking trails:</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Trail Name</td>
+                    <td>Trail Length</td>
+                    <td>Elevation Change</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    @foreach(var trail in ViewBag.trail) {
+                    <tr>
+                        <td><a href="trails/@trail.Id">@trail.Name</a></td>
+                        <td>@trail.Length Miles</td>
+                        <td>@trail.Gain feet</td>
+                    </tr>
+                    }
+                
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="/newtrail">Add A New Trail</a>
+    </div>
+</body>
+<style>
+    td{
+        padding: 0px 10px;
+    }
+</style>
+</html>
