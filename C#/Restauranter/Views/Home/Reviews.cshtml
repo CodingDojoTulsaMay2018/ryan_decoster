@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restauranter</title>
+</head>
+<body>
+    <h1>Review Page</h1>
+    @foreach(var i in ViewBag.reviews) {
+        <div class="review">
+            <p class="label">Review for:</p>
+            <span class="name">@i.Restaurant</span>
+
+            @if (i.Star == 1) {
+                <span class="star">@i.Star star</span>
+            }
+            else {
+                <span class="star">@i.Star stars</span>
+            }
+            <br>
+            <p class="label">Reviewer:</p>
+            @i.Name,
+            @Convert.ToDateTime(i.Date).ToString("MMMM dd, yyyy")<br>
+            <p class="indent">@i.Description</p><br>
+        </div>
+    }
+</body>
+<style>
+    .label{
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    }
+    .review{
+        border-bottom: 2px solid black;
+        margin-top: 10px;
+    }
+    .indent{
+        text-indent: 40px;
+    }
+    .name{
+        margin-right: 10px;
+    }
+    .star{
+        font-weight: bold;
+    }
+</style>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restauranter</title>
+</head>
+<body>
+    <h1>Write A New Review:</h1>
+    <table>
+            <form class="form" asp-action="create" asp-controller="Home" method="post">
+                <tr>
+                    <td><label asp-for="Name">Reviewer Name:</label></td>
+                    <td><input asp-for="Name" type="text" name="Name"></td>
+                    <td><span asp-validation-for="Name"></span></td>
+
+                    <td><label asp-for="Star">Star:</label></td>
+                    <td><select name="Star">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select></td>
+                    <td><span asp-validation-for="Star"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Restaurant">Restaurant:</label></td>
+                    <td><input asp-for="Restaurant" type="text" name="Restaurant"></td>
+                    <td><span asp-validation-for="Restaurant"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Description">Review:</label></td>
+                    <td><textarea name="Description" cols="50" rows="5"></textarea></td>
+                    <td><span asp-validation-for="Description"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Date">Date:</label></td>
+                    <td><input asp-for="Date" type="date" name="Date"></td>
+                    <td><span asp-validation-for="Date"></span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-success">Submit</button></td>
+                </tr>
+            </form>
+        </table>
+</body>
+<style>
+    td{
+        padding: 0px 10px;
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+    span {
+        color: red;
+    }
+</style>
+</html>
