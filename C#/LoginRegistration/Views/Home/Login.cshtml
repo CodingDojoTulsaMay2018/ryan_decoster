@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Registration</title>
+    @model LoginRegistration.Models.User
+</head>
+<body>
+    <h1>Login</h1>
+        <table>
+        <form class="form" asp-action="login" asp-controller="Home" method="post">
+            <tr>
+                <td><label asp-for="Email">Email:</label></td>
+                <td><input asp-for="Email" type="text" name="Email"></td>
+                <td><span asp-validation-for="Email"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Password">Password:</label></td>
+                <td><input asp-for="Password" type="password" name="Password"></td>
+                <td><span asp-validation-for="Password"></span></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-success">Login</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+<style>
+    td{
+        padding: 0px 10px;
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+    span {
+        color: red;
+    }
+</style>
+</html>

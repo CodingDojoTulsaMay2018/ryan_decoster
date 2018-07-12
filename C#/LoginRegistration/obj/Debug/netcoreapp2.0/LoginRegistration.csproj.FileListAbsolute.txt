@@ -1,0 +1,11 @@
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\bin\Debug\netcoreapp2.0\LoginRegistration.deps.json
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.json
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.dev.json
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\bin\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\bin\Debug\netcoreapp2.0\LoginRegistration.pdb
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfoInputs.cache
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfo.cs
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.pdb
+C:\Users\Ryan\Desktop\entity_framework\loginregistration\obj\Debug\netcoreapp2.0\LoginRegistration.csprojResolveAssemblyReference.cache
