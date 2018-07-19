@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Page</title>
+    @model ViewModel
+</head>
+<body>
+    <br>
+    <a style="float: right;" href="/">Add A New Category</a>
+    @foreach(var product in @Model.allProducts)
+        {
+            if(product.ProductId == @Model.Product.ProductId)
+            {
+                <h2>@Model.Product.Name</h2>
+                    <h4>Categories:</h4>
+                    <ul>
+                        @foreach(var category in @product.Categories)
+                        {
+                            <li>@category.Category.Name</li>
+                        }
+                    </ul>
+            }
+        } 
+    <form action="/CategoryToProduct/@Model.Product.ProductId" method="post">
+        <label asp-for="ProductCategory.CategoryId">Add Category:</label> 
+        <select asp-for="ProductCategory.CategoryId">
+            @foreach (var category in @Model.allCategories) {
+            <option value="@category.CategoryId">@category.Name</option>
+            }
+        </select>
+        <button class="btn btn-primary btn-sm">Add</button>
+    </form>
+    @TempData["error"]
+</body>
+</html>

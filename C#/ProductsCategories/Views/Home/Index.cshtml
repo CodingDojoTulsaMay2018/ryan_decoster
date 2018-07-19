@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Product</title>
+    @model ViewModel
+</head>
+<body>
+<div class="main_content">
+    <div class="prod">
+        <h1>New Product</h1>
+        <table>
+            <form asp-action="CreateProduct" asp-controller="Home" method="post">
+                <tr>
+                    <td><label for="Name">Name:</label></td>
+                    <td><input type="text" asp-for="Product.Name"></td>
+                    <td><span class="error" asp-validation-for="Product.Name"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="Description">Description:</label></td>
+                    <td><textarea asp-for="Product.Description" cols="30" rows="5"></textarea></td>
+                    <td><span class="error" asp-validation-for="Product.Description"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="Price">Price:</label></td>
+                    <td><input type="text" asp-for="Product.Price"></td>
+                    <td><span class="error" asp-validation-for="Product.Price"></span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-primary">Create</button></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+    <div class="cat">
+        <h1>New Category</h3>
+        <table>
+            <form asp-action="CreateCategory" asp-controller="Home" method="post">
+                <tr>
+                    <td><label for="Name">Name:</label></td>
+                    <td><input type="text" asp-for="Category.Name"></td>
+                    <td><span class="error" asp-validation-for="Category.Name"></span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-primary">Create</button></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+    </div>
+    </div>
+</body>
+<style>
+table{
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+span {
+    color: red;
+    font-size: 14px;
+}
+.main_content{
+    display: inline-block;
+}
+.cat, .prod{
+    display: inline-block;
+}
+</style>
+</html>
