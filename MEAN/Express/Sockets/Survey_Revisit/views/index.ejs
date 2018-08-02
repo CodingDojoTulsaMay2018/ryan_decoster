@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+    <script>
+    $(document).ready(function (){
+        var socket = io.connect();
+        $('#survey').submit(function(e) {
+            e.preventDefault();
+            socket.emit("post_form", {
+            name: $('#name').val(),
+            location: $('#location').val(),
+            stack: $('#stack').val(),
+            comment: $('#comment').val()
+        });
+    });
+        // listener
+        socket.on('updated_message', function (data){
+            $('#message').html("You emitted the following information to the server: " + JSON.stringify(data.response));
+        });
+        socket.on('random_number', function (data){
+            $('#number').html("Your lucky number emitted by the server is : " + JSON.stringify(data.response));
+        });
+    });
+    </script>
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="message"></div>
+            <div id="number"></div>
+        </div>
+        <h1>Survey Form</h1>
+        <form id="survey">
+            <table>
+                <tr>
+                    <td><b>Name: </b></td>
+                    <td><input id="name" type="text" name="name" placeholder=" Insert Name"/></td>
+                </tr>
+                <tr>
+                    <td><b>Dojo Location: </b></td>
+                    <td>
+                        <select id="location" name="location">
+                            <option value="San Jose">San Jose</option>
+                            <option value="Tulsa">Tulsa</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Seattle">Seattle</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Favorite Stack: </b></td>
+                    <td>
+                        <select id="stack" name="stack">
+                            <option value="Python">Python</option>
+                            <option value="C#">C#</option>
+                            <option value="MEAN">MEAN</option>
+                            <option value="Ruby">Ruby</option>
+                            <option value="iOS">iOS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Comment (optional): </b></td>
+                    <td><textarea id="comment" name="comment" value="" rows="8" cols="80"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class='btn btn-success' type="submit" value="Submit" />
+                    </td>
+                </tr>
+            </table>  
+        </form>
+    </div>
+</body>
+<style>
+    form {
+        border: 1px solid black;
+    }
+    td{
+        padding: 0px 10px;
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+    body{
+        padding: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    .header{
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+</style>
+</html>
