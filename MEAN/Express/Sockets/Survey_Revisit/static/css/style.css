@@ -1,0 +1,21 @@
+form {
+    border: 1px solid black;
+}
+td{
+    padding: 0px 10px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+body{
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+.header{
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}

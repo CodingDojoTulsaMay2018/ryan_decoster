@@ -20,6 +20,7 @@ io.on('connection', function (socket) {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/static')));
+app.use(express.static(path.join(__dirname, "/static/css")));
 app.use(session({
     secret: 'tulsadojo',
     resave: false,

@@ -8,22 +8,23 @@
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type ="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Epic Button Game</title>
 </head>
-    <script>
-    $(document).ready(function (){
-        var socket = io.connect();
-        $('#epic_butt').click(function() {
-            socket.emit("epic_clicked");
-        });
-        socket.on('epic_response', function(data){
-            $('#count').html(data.response)
-        });
-        $('#epic_reset').click(function() {
-            socket.emit("reset_clicked");
-        });
+<script>
+$(document).ready(function (){
+    var socket = io.connect();
+    $('#epic_butt').click(function() {
+        socket.emit("epic_clicked");
     });
-    </script>
+    socket.on('epic_response', function(data){
+        $('#count').html(data.response)
+    });
+    $('#epic_reset').click(function() {
+        socket.emit("reset_clicked");
+    });
+});
+</script>
 <body>
     <div class="container">
         <table>
@@ -40,9 +41,6 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
-            </tr>
-            <tr>
                 <td>
                     <input id="epic_reset" class='btn btn-danger' type="submit" value="Reset count!" />
                 </td>
@@ -50,16 +48,4 @@
         </table>  
     </div>
 </body>
-<style>
-    body{
-        padding: 10px;
-        text-align: center;
-    }
-    table{
-        margin-left: auto;
-        margin-right: auto;
-        border-collapse: separate;
-        border-spacing: 10px;
-    }
-</style>
 </html>

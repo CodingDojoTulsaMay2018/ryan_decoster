@@ -22,14 +22,15 @@ io.on('connection', function (socket) {
         socket.emit('epic_response', { response: count });
     });
     socket.on('reset_clicked', function (data) {
-        // emitter
         count = 0;
+        // emitter
         socket.emit('epic_response', { response: count });
     });
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/static')));
+app.use(express.static(path.join(__dirname, "/static/css")));
 app.use(session({
     secret: 'tulsadojo',
     resave: false,
