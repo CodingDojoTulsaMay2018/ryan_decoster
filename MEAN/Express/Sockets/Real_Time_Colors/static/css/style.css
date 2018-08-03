@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.buttons{
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    align-content: center;
+    margin: 100px auto 100px auto;
+}
+.btn{
+    width: 30%;
+    height: 110px;
+    margin: 10px;
+    font-weight: bold;
+}

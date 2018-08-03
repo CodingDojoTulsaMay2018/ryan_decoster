@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Real Time Colors</title>
+</head>
+<script>
+$(document).ready(function (){
+    var socket = io.connect();
+    $('#green_btn').click(function() {
+        // on click, emit to server
+        socket.emit("green");
+    });
+    $('#blue_btn').click(function() {
+        socket.emit("blue");
+    });
+    $('#pink_btn').click(function() {
+        console.log("I'm emitting pink yo.")
+        socket.emit("pink");
+    });
+    socket.on('response', function(data){
+        // recieves emit from server with the data response
+        console.log(data.response)
+        console.log("recieved response from server.")
+        $('body').css("background-color", data.response);
+    });
+});
+</script>
+<body>
+    <div class="container">
+        <h1>Real Time Colors</h1>
+        <div class="buttons">
+            <input id="green_btn" class='btn' type="submit" value="Green" />
+            <input id="blue_btn" class='btn' type="submit" value="Blue" />
+            <input id="pink_btn" class='btn' type="submit" value="Pink" />
+        </div>
+    </div>
+</body>
+</html>
