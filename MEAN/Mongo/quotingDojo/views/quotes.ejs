@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Quotes</h1>
         <div class="quotes">
-            <a style='float:right;'class='btn btn-primary' href="/">Back</a>
+            <a style='float:right;' class='btn btn-primary' href="/">Back</a>
             <% for (var i in quotes) { %>
                 <h5>"<%= quotes[i].quote %>"</h5>
                 <p>-<%= quotes[i].name %> on <%= quotes[i].createdAt.toLocaleTimeString('en-us', { hour: '2-digit', minute: '2-digit', month: 'long', day: '2-digit', year: 'numeric' }) %></p>
