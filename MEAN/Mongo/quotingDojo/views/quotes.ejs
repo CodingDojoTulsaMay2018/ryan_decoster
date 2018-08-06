@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quotes</h1>
+        <div class="quotes">
+            <a style='float:right;'class='btn btn-primary' href="/">Back</a>
+            <% for (var i in quotes) { %>
+                <h5>"<%= quotes[i].quote %>"</h5>
+                <p>-<%= quotes[i].name %> on <%= quotes[i].createdAt.toLocaleTimeString('en-us', { hour: '2-digit', minute: '2-digit', month: 'long', day: '2-digit', year: 'numeric' }) %></p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
