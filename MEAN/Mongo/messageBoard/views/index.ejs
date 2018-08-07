@@ -1,0 +1,71 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Dojo Message Board</title>
+</head>
+<body>
+    <div class="container">
+            <% if(messages.registration) { %>
+                <% for (var x of messages.registration) { %>
+                <li><%= x %></li>
+                <% } %>
+            <% } %>
+        <h1>The Dojo Message Board</h1><br>
+        <form action="/postMessage" method="post">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input class='form-control' type="text" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Message: </td>
+                    <td><textarea class='form-control' name="message" cols="80" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button style='float: right;' class='btn btn-success' type="submit">Post Message</button></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form><br>
+        <% for (var i in messages) { %>
+            <table>
+                <tr>
+                    <td><h5>Name:</h5></td>
+                    <td><h5><%= messages[i].user %></h5></td>
+                </tr>
+                <tr>
+                    <td><h5>Message:</h5></td>
+                    <td><h5><%= messages[i].message %></h5></td>
+                </tr>
+            </table>
+            <% for (var j of messages[i]._comments) { %>
+                <p><i>Name:</i>&nbsp;<%= j.user %></p>
+                <p><i>Comment:</i>&nbsp;<%= j.comment %></p>
+            <% } %>
+            <form class='comment' action="/postComment/<%= messages[i]._id %>" method="post">
+                <table>
+                    <tr>
+                        <td>Name: </td>
+                        <td><input class='form-control' type="text" name="user"></td>
+                    </tr>
+                    <tr>
+                        <td>Comment: </td>
+                        <td><textarea class='form-control' name="comment" cols="50" rows="3"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button style='float: right;' class='btn btn-success' type="submit">Post Comment</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        <% } %>
+    </div>
+</body>
+</html>
