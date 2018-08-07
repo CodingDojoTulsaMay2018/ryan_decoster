@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="container">
-            <% if(messages.registration) { %>
-                <% for (var x of messages.registration) { %>
-                <li><%= x %></li>
-                <% } %>
-            <% } %>
         <h1>The Dojo Message Board</h1><br>
+        <% if(messages.registration) { %>
+            <% for (var x of messages.registration) { %>
+            <li><%= x %></li>
+            <% } %>
+        <% } %>
         <form action="/postMessage" method="post">
             <table>
                 <tr>
@@ -33,22 +33,22 @@
                 </tr>
             </table>
         </form><br>
-        <% for (var i in messages) { %>
+        <% for (var i in posts.reverse()) { %>
             <table>
                 <tr>
                     <td><h5>Name:</h5></td>
-                    <td><h5><%= messages[i].user %></h5></td>
+                    <td><h5><%= posts[i].user %></h5></td>
                 </tr>
                 <tr>
                     <td><h5>Message:</h5></td>
-                    <td><h5><%= messages[i].message %></h5></td>
+                    <td><h5><%= posts[i].message %></h5></td>
                 </tr>
             </table>
-            <% for (var j of messages[i]._comments) { %>
+            <% for (var j of posts[i]._comments.reverse()) { %>
                 <p><i>Name:</i>&nbsp;<%= j.user %></p>
                 <p><i>Comment:</i>&nbsp;<%= j.comment %></p>
             <% } %>
-            <form class='comment' action="/postComment/<%= messages[i]._id %>" method="post">
+            <form class='comment' action="/postComment/<%= posts[i]._id %>" method="post">
                 <table>
                     <tr>
                         <td>Name: </td>

@@ -15,10 +15,6 @@ table{
     border-spacing: 12px;
     border-collapse: separate;
 }
-li{
-    text-align: center;
-    color: red;
-}
 p{
     text-indent: 5%;
 }

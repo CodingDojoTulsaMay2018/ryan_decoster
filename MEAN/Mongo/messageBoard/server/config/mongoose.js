@@ -3,7 +3,6 @@ const path = require("path");
 const fs = require("fs");
 
 mongoose.connect("mongodb://localhost:27017/messageboard", { useNewUrlParser: true });
-mongoose.Promise = global.Promise;
 
 var models_path = path.join(__dirname, './../models');
 // read all of the files in the models_path and require (run) each of the javascript files
