@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Reptile Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Reptile Dashboard</h1><br>
+        <div class="main">
+            <h4>All Reptiles:</h4>
+            <table class='table table-striped'>
+                <% for (var i in reptiles) { %>
+                    <tr>
+                        <td><a href="/reptiles/<%= reptiles[i]._id %>"><p><%= reptiles[i].name %></p></a></td>
+                    </tr>
+                <% } %>
+            </table>
+            <a class='btn btn-primary' href="/new">Create A Reptile</a>
+        </div>
+    </div>
+</body>
+<style>
+</style>
+</html>

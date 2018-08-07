@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Reptile Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit <%= reptile.name %>'s Profile</h1>
+        <form action="/reptiles/<%= reptile._id %>" method="post">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input class='form-control' type="text" name="name" placeholder="<%= reptile.name %>"></td>
+                </tr>
+                <tr>
+                    <td>Species: </td>
+                    <td><select class='form-control' name="species">
+                        <option value="" hidden><%= reptile.species %></option>
+                        <option value="Crocodile">Crocodile</option>
+                        <option value="Snake">Snake</option>
+                        <option value="Alligator">Alligator</option>
+                        <option value="Lizard">Lizard</option>
+                        <option value="Turtle">Turtle</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Personality: </td>
+                    <td><select class='form-control' name="personality">
+                        <option value="" hidden><%= reptile.personality %></option>
+                        <option value="Aggressive">Aggressive</option>
+                        <option value="Neutral">Neutral</option>
+                        <option value="Relaxed">Relaxed</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Age: </td>
+                    <td><input class='form-control' type="text" name="age" placeholder="<%= reptile.age %>"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class='btn btn-success' type="submit">Update</button> <a style='float: right;' class='btn btn-primary' href='/'>Back</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

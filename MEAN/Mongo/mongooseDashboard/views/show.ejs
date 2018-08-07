@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Reptile Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= reptile.name %>'s Profile</h1>
+        <div class="main">
+            <% if (reptile.species == 'Crocodile') { %>
+                <img src="/images/croc.jpg" alt="crocodile">
+            <% } %>
+            <% if (reptile.species == 'Alligator') { %>
+                <img src="/images/alligator.jpg" alt="alligator">
+            <% } %>
+            <% if (reptile.species == 'Snake') { %>
+                <img src="/images/snake.jpg" alt="snake">
+            <% } %>
+            <% if (reptile.species == 'Lizard') { %>
+                <img src="/images/lizard.jpg" alt="lizard">
+            <% } %>
+            <% if (reptile.species == 'Turtle') { %>
+                <img src="/images/turtle.jpg" alt="turtle">
+            <% } %>
+            <table>
+                <tr>
+                    <td><b>Species: </b></td>
+                    <td><%= reptile.species %></td>
+                </tr>
+                <tr>
+                    <td><b>Personality: </b></td>
+                    <td><%= reptile.personality %></td>
+                </tr>
+                <tr>
+                    <td><b>Age: </b></td>
+                    <td><%= reptile.age %></td>
+                </tr>
+                <tr>
+                    <td><a class='btn btn-danger' href="/destroy/<%= reptile._id %>">Delete</a></td>
+                    <td><a class='btn btn-secondary' href="/edit/<%= reptile._id %>">Edit</a></td>
+                    <td><a class='btn btn-primary' href="/">Back</a></td>
+                </tr>
+                
+            </table><br>
+        </div>
+    </div>
+</body>
+</html>
