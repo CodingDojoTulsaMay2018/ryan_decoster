@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <h1>
+    Restful Tasks Api
+  </h1>
+  <button (click)="getTasksFromService()">Show All Tasks</button>
+</div>
+
+
+<div *ngFor="let task of tasks" style="text-align:center">
+  <p>{{task.title}}</p>
+  <button (click)="info(task)">Show</button>
+</div>
+
+<div style="text-align:center">
+  <h2>{{task.title}}</h2>
+  <h2>{{task.description}}</h2>
+</div>
+
+
