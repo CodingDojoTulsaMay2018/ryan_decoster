@@ -1,0 +1,55 @@
+<div style="text-align:center">
+  <h1>
+    Restful Tasks CRUD
+  </h1>
+  <div style="width: 450px; vertical-align: top; display: inline-block; margin: 0 auto;"></div>
+  <h3>Add A Task</h3>
+  <form (submit)="onSubmit()">
+    <table>
+      <tr>
+        <td><label for="newTask.title">Title</label></td>
+        <td><input type="text" [(ngModel)]="newTask.title" name="newTask.title"/></td>
+      </tr>
+      <tr>
+        <td><label for="newTask.description">Description</label></td>
+        <td><input  type="text" [(ngModel)]="newTask.description" name="newTask.description"/></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button class="btn btn-success" type="submit">Create Task</button></td>
+      </tr>
+    </table>
+  </form><br>
+  
+  <div *ngFor="let task of tasks" style="overflow: auto; word-wrap: break-word; margin-left: 10px; border: 2px solid green; height: 150px; width: 300px; padding: 10px; vertical-align: top; display: inline-block;">
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <table>
+      <tr>
+        <td><button class="btn btn-primary" type="button" (click)="toggleEdit(task)">Edit</button></td>
+        <td><button class="btn btn-danger" type="button" (click)="deleteTask(task)">Delete</button></td>
+      </tr>
+    </table>
+  </div><br>
+
+<br><div *ngIf="isEdit" style="text-align:center; border: 2px solid red; border-radius: 10px; padding: 10px; width: 450px; margin: 10px auto;">
+<h3>{{ editTask.title }}</h3>
+<p>{{ editTask.description }}</p><br>
+<form (submit)="updateTask(task)">
+  <table>
+    <tr>
+      <td><label for="editTask.title">Title</label></td>
+      <td><input type="text" [(ngModel)]="editTask.title" name="editTask.title"/></td>
+    </tr>
+    <tr>
+      <td><label for="editTask.description">Description</label></td>
+      <td><input type="text" [(ngModel)]="editTask.description" name="editTask.description"/></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-primary" type="submit">Update</button></td>
+    </tr>
+  </table>
+</form>
+</div>
+

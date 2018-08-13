@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <h1>
+      Restful Tasks API
+    </h1>
+    <div style='text-align: center; border: 2px solid blue; width: 500px; border-radius: 10px; margin: 0 auto; padding: 10px;'>
+      <button (click)="getTasksFromService()">Show All Tasks</button>
+    </div><br>
+    <div *ngFor="let task of tasks" style="border: 2px solid green; height: 150px; width: 300px; padding: 10px; vertical-align: top; display: inline-block; margin: 0 auto;">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <button type="button" (click)="showSection(task)">Show</button>
+    </div>
+</div><br> 
+
+<div *ngIf="shouldDisplaySection" style="text-align:center; border: 2px solid red; border-radius: 10px; padding: 10px; width: 450px; margin: 0 auto;">
+  <h3>{{ task.title }}</h3>
+  <p>{{ task.description }}</p>
+  <button type="button" (click)="hideSection($event)">Clear</button>
+</div>
+  
+  
